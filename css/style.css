@@ -1,0 +1,247 @@
+/* プレイ画面情報関連*/
+body {
+  background-image: url(../img/mori.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.play-display {
+  display: flex;
+  flex-direction: row;
+}
+
+.player-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  background-color:rgba(0,0,0,0.5);
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.game-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  background-color: black;
+  border-radius: 20px;
+  border: 5px solid green;
+}
+
+.enemy-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  background-color:rgba(0,0,0,0.5);
+  border: 1px solid white;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+
+.player-mushi {
+  display: flex;
+  height: 45vh; /* 400px */
+  width: 20vw; /* 200px */
+  justify-content: center;
+}
+
+.player-mushi img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.player-hp {
+  width: 20vw;
+  justify-content: center;
+  display: flex;
+  font-size: 3vw; /* 40px */ 
+  margin: 0 auto;
+  object-fit: cover;
+  text-shadow: 5px 1px 1px #000;
+  color: white;
+  font-family: 'Dela Gothic One', cursive;
+  height: 10vh;
+  align-items: center;
+}
+
+
+.enemy-hp {
+  width: 20vw;
+  justify-content: center;
+  display: flex;
+  font-size: 3vw; /* 40px */ 
+  margin: 0 auto;
+  object-fit: cover;
+  text-shadow: 5px 1px 1px #000;
+  color: white;
+  font-family: 'Dela Gothic One', cursive;
+  height: 10vh;
+  align-items: center;
+}
+
+#center_screen {
+  width: 50vw;
+  height: 45vh;
+  background-color: black;
+  border-radius: 20px;
+}
+.text-box{
+  text-align: center;
+  color: red;
+  background-color: black;
+  height: 30vh;
+  width: 50vw;
+  font-family: 'Dela Gothic One', cursive;
+  font-size: 2vw;
+  border-radius: 20px;
+}
+
+img{
+  width: 100%;
+}
+
+
+/* 
+.text-box {
+  background-color: rgb(220, 240, 199);
+  height: 30vh;
+  width: 50vw;
+  border: 5px solid green;
+  border-radius: 20px;
+  font-family: 'Dela Gothic One', cursive;
+  font-size: 2vw;
+  color: rgb(10, 10, 129);
+  text-align: center;
+} */
+
+.hand-box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#player_hand {
+  width: 10vw;
+  border: thick solid yellow;
+  border-radius: 50%;
+}
+
+#com_hand {
+  width: 10vw;
+  border: thick solid purple;
+  border-radius: 50%;
+}
+
+/* 虫の画面 */
+#mushidata {
+  object-fit: contain;
+}
+
+#enemy_mushi {
+  object-fit: contain;
+}
+
+
+
+/* じゃんけんボタン */
+.janken-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*2列のグリッド*/
+  grid-template-areas:
+    "item1 item1"
+    "item2 item3";
+}
+
+.punipuni {
+  animation: punipuni 0.8s infinite;
+}
+
+@keyframes punipuni {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(0.98, 1.15)
+  }
+}
+
+.janken-container {
+  display: flex;
+}
+
+.janken-button {
+  position: relative;
+  width: 11vw;
+  margin: 0px 0.6vw;
+  border-radius: 50%;
+  /*角の丸み*/
+  display: flex;
+  box-shadow: 0 3px 0 rgb(0, 0, 0, 2);
+  margin: 0 auto;
+}
+
+.player-side .janken-button:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  animation: paused;
+}
+
+
+#gu_btn {
+  background-color: red;
+  grid-area: item1;
+}
+
+#cho_btn {
+  background-color: yellow;
+  grid-area: item2;
+  text-align: right;
+}
+
+#par_btn {
+  background-color: blue;
+  grid-area: item3;
+  text-align: left;
+}
+
+/* レスポンシブ用コード */
+  /* @media (max-width:800px){
+  .play-display{
+    display: grid;
+    grid-template-columns:0fr 1fr 0fr 1fr 1fr 1fr; 
+    grid-template-areas:
+      "item1 item1 item1"
+      "item2 item4 item3";
+  }
+  .game-center{
+    display:contents;
+    grid-area: item1;
+    text-align: center;
+  }
+  .player-side{
+    grid-area: item2;
+  }
+  .player-mushi{
+    height: auto;
+  }
+  .enemy-side{
+    grid-area: item3;
+  }
+  .text-box{
+    grid-area: item4;
+  }
+ } */
+/* @media (max-width:450px){
+  .play-display{
+    transform: rotate(-90deg);
+  }
+}  */

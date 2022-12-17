@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+
+<body onload="proc()">
+  <audio id="a1" autoplay loop="0" music.volume="-20">
+    <source src="./mp3/doraemonbgm2.mp3" type="audio/mp3">
+  </audio>
+  <!-- プレイ画面 -->
+  <div class="play-display">
+    <div class="player-side">
+      <div class="player-mushi"><img id="mushidata" src="./img/hatena.jpg" alt=""></div>
+      <div class="player-hp">
+        <p>HP　</p>
+        <p id="player_hp">???</p>
+      </div>
+      <div class="janken-box">
+        <div id="gu_btn" class="janken-button punipuni"><img src="./img/gu.png" alt=""></div>
+        <div id="cho_btn" class="janken-button punipuni"><img src="./img/choki.png" alt=""></div>
+        <div id="par_btn" class="janken-button punipuni"><img src="./img/par.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="game-center">
+      <div id="center_screen"><img id="center_screen_img" src="" alt=""></div>
+      <div class="text-box">
+        <p id="text_items1">ムシキングバトルが始まったぞ！</p>
+        <p id="text_items2">相手は森に住んでいる青いタヌキだ</p>
+        <p id="text_items3">じゃんけんに勝ってダメージを与えよう！</p>
+      </div>
+      <div class="hand-box">
+        <img id="player_hand" src="./img/hatena.jpg" alt="">
+        <img id="com_hand" src="./img/hatena.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="enemy-side">
+      <div class="player-mushi" style="margin:0 auto;"><img id="enemy_mushi" style="width: 350px;" src="./mushi.img/doraemon2.jpg" alt=""></div>
+      <div class="enemy-hp">
+        <p>HP　</p>
+        <p id="enemy_hp">120</p>
+      </div>
+      <div class="janken-box">
+        <div id="gu_btn" class="janken-button"><img src="./img/gu.png" alt=""></div>
+        <div id="cho_btn" class="janken-button"><img src="./img/gu.png" alt=""></div>
+        <div id="par_btn" class="janken-button"><img src="./img/gu.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <audio id="effect_audio1"><source src="./mp3/zangeki.mp3" type="audio/mp3"></audio>
+  <audio id="effect_audio2"><source src="./mp3/redzangeki.mp3" type="audio/mp3"></audio>
+  <audio id="effect_audio3"><source src="./mp3/rightning.mp3" type="audio/mp3"></audio>
+  <audio id="aiko_audio"><source src="./mp3/aiko.mp3" type="audio/mp3"></audio>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./js/doraemon.js"></script>
+<script type="text/javascript">
+
+  function proc() {
+    const img = document.getElementById("mushidata");
+    target = document.getElementById("player_hp");
+    if (mushi_no === 0) {
+      img.src = "./mushi.img/ougononi.jpg";
+      target.innerHTML = "180";
+    } else if (mushi_no === 1) {
+      img.src = "./mushi.img/herukures.jpg";
+      target.innerHTML = "200";
+    } else if (mushi_no === 2) {
+      img.src = "./mushi.img/kokuwagata.jpg";
+      target.innerHTML = "120";
+    } else if (mushi_no === 3) {
+      img.src = "./mushi.img/supekiosis.jpg";
+      target.innerHTML = "120";
+    } else if(mushi_no === 4){
+      img.src = "./mushi.img/girafa.jpg";
+      target.innerHTML = "180";
+    }
+  };
+
+
+
+    // const img = document.getElementById("mushidata");
+    // img.src = "./mushi.img/ougononi.jpg";
+    // else if (playerdata[0] === 1) {
+    //   const img = document.getElementById("mushidata");
+    //   img.src = "./mushi.img/herukures.jpg";
+    // } else if (playerdata[0] === 2) {
+    //   const img = document.getElementById("mushidata");
+    //   img.src = "./mushi.img/kokuwagata.jpg";
+    // } else if (playerdata[0] === 3) {
+    //   const img = document.getElementById("mushidata");
+    //   img.src = "./mushi.img/supekiosis.jpg";
+    // }
+
+</script>
+
+</html>

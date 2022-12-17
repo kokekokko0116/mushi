@@ -1,0 +1,88 @@
+.tittle-img {
+  display: flex;
+  justify-content: center;
+}
+
+#gacha-button {
+  display: flex;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0px 5px;
+  border-radius: 50%;
+  /*角の丸み*/
+}
+
+h2 {
+  text-align: center;
+}
+
+img{
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.button100 {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.punipuni {
+  animation: punipuni 1.5s infinite;
+}
+
+@keyframes punipuni {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.1, 1.1)
+  }
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+.card-box {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 25%;
+  /* max-width: 150px; */
+}
+
+.question{
+  font-size: 24px;
+  text-align: center;
+}
+.ok-button{
+display: flex;
+position: relative;
+align-items: center;
+justify-content: center;
+align-content: center;
+}
+.ok-button a{
+  font-size: 36px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+@media (max-width:600px){
+  body{
+    width: 100%;
+  }
+  .card-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-box{
+    width: 85%;
+  }
+
+}
