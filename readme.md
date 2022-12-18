@@ -2,7 +2,7 @@
 
 ## やってみてね
 
-  - https://kokekokko0116.github.io/janken2/
+  - https://kokekokko0116.github.io/mushi/
 
 ## 紹介と使い方
 
